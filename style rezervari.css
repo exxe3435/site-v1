@@ -1,0 +1,418 @@
+/* Resetare stiluri */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setări pentru fonturi */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Transparent */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Transparent cu un pic de culoare */
+    color: white;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Videoclipul de fundal */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 10%; /* Textul mai sus */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+}
+
+/* Formularul de Rezervare - Deasupra videoclipului */
+#reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.reservation-content {
+    width: 100%;
+    text-align: center;
+}
+
+.reservation-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.reservation-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.reservation-form input,
+.reservation-form button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.reservation-form input[type="number"],
+.reservation-form input[type="text"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"] {
+    background-color: #f9f9f9;
+}
+
+.reservation-form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.reservation-form button:hover {
+    background-color: #c53918;
+}
+
+/* Stilizare toast (notificare) */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* Header Transparent - Dimensiune redusă */
+#header {
+    background-color: rgba(255, 255, 255, 0.7); /* Aduce o transparență ușoară */
+    padding: 10px 0; /* Micșorează înălțimea header-ului */
+    position: fixed; /* Fixează header-ul în partea de sus */
+    width: 100%; /* Asigură-te că ocupă întreaga lățime a paginii */
+    z-index: 10; /* Asigură-te că header-ul rămâne deasupra celorlalte elemente */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Logo-ul */
+.logo-img {
+    width: 120px; /* Ajustează dimensiunea logo-ului */
+    height: auto;
+}
+
+/* Meniu de Navigare */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #c53918; /* Culoare de hover pentru linkuri */
+}
+
+/* Prevenirea scroll-ului pe site */html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Previne scroll-ul pe întreaga pagină */
+    height: 100%; /* Asigură că elementele ocupă toată înălțimea paginii */
+    width: 100%; /* Asigură că nu există scroll pe orizontală */
+}
+
+/* Videoclip de fundal (optional, în funcție de design) */
+#hero {
+    position: relative;
+    height: 100vh; /* Videoclipul ocupă întreaga înălțime a ecranului */
+    background: url('images/video-background.mp4') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+/* Formularul de rezervare */
+#reservation {
+    position: absolute;
+    top: 40%; /* Pune formularul mai sus */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semitransparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+#reservation h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#reservation p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #c53918;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+header + nav {
+    display: none; /* Ascunde meniul care vine după header */
+}
+
+#reservation {
+    margin-top: -200px; /* Ridică meniul cu 50px față de poziția sa originală */
+}
+
+@font-face {
+    font-family: 'LEMONMILK';
+    src: url('fonts/LEMONMILK.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'LEMONMILK', sans-serif;
+}
+/* Stilizare Footer */
+#footer {
+    background-color: #333; /* Culoare de fundal */
+    color: white; /* Culoare text */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-left p {
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo-uri ANPC și dispute */
+.footer-logos img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    background-color: #333; /* Culoare de fundal */
+    color: white; /* Culoare text */
+    padding: 20px 0;
+    flex-shrink: 0; /* Evită micșorarea footer-ului */
+}
+html, body {
+    height: 250%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    background-color: #333; /* Culoare de fundal */
+    color: white; /* Culoare text */
+    padding: 20px 0;
+    flex-shrink: 0; /* Evită micșorarea footer-ului */
+}
+#footer {
+    background-color: #333; /* Culoare de fundal */
+    color: white; /* Culoare text */
+    padding: 20px 0;
+    margin-top: auto; /* Acesta împinge footer-ul jos */
+}
+.footer-right img {
+    width: 150px; /* Reducem dimensiunea la 20px */
+    height: 50px; /* Reducem dimensiunea la 20px */
+    margin-right: 8px;
+    vertical-align: middle;
+}

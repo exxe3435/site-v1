@@ -1,0 +1,958 @@
+/* Resetare de bază */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
+    overflow-y: auto; /* Permite scroll-ul vertical */
+    font-family: 'Lemon Milk', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header transparent */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundal semi-transparent */
+    padding: 20px 0;
+    z-index: 10; /* Asigură-te că navbar-ul este deasupra altor elemente */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Aliniere la stânga-dreapta pentru logo și meniu */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c53918; /* Culoare la hover */
+}
+
+.logo {
+    height: 80px;
+}
+
+/* Secțiunea Video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupă întreaga înălțime a paginii */
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Videoclipul va acoperi întregul ecran */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Secțiune Despre Noi */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.about img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Secțiune Meniu */
+.menu {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.menu-items span {
+    font-weight: bold;
+    color: #c53918;
+}
+
+/* Stiluri pentru secțiunea Despre Noi */
+#about {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about h2 {
+    font-family: 'Lemon Milk', sans-serif;  /* Sau orice font preferi */
+    font-size: 2.5rem; /* Titlu mai mare */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Modifică stilul textului pentru a-l face mai elegant și în litere mici */
+#about p {
+    font-family: 'Lora', serif;  /* Alege un font elegant (îl poți înlocui cu orice font care îți place) */
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-transform: lowercase;  /* Transformă textul în litere mici */
+    letter-spacing: 0.5px;  /* Distanțare între litere pentru un efect mai elegant */
+}
+
+#about strong {
+    font-weight: bold;
+    text-transform: uppercase; /* Facem textul "strong" să fie cu litere mari pentru contrast */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+/* Secțiune Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.menu-slogan {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.menu-description {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.menu-items strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru mesajul „Vă așteptăm în locație” */
+.location-message {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru secțiunea Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#menu h2 {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.menu-column {
+    width: 45%;
+}
+
+.category {
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-details {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stiluri pentru mesajul „Vă așteptăm în locație” */
+.location-message {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Secțiune Despre Noi */
+#about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about img {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Meniu */
+#menu {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.menu-items {
+    list-style-type: none;
+}
+
+.menu-items li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.menu-items span {
+    font-weight: bold;
+}
+
+/* Galerie */
+#gallery {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    margin-left: 0%; /* Mută secțiunea spre dreapta */
+    max-width: 80%; /* Lățimea maximă pentru un aspect echilibrat */
+    border-radius: 30px;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1); /* Umbra pe partea dreaptă */
+}
+
+.testimonial {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #666;
+    border-left: 5px solid #333; /* Linia de separare pe stânga */
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    line-height: 1.6; /* Adaugă mai mult spațiu între linii */
+}
+
+.testimonial:hover {
+    background-color: #f9f9f9; /* Schimbă culoarea fundalului la hover */
+    border-color: #c53918; /* Schimbă culoarea liniei de separare */
+}
+
+.testimonial .client-name {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+
+
+
+
+
+/* Newsletter */
+    #newsletter {
+        background-color: #fff;
+        padding: 60px 0;
+        text-align: center;
+        margin-left: 30%; /* Adaugă o marjă stângă pentru a-l muta spre dreapta */
+        max-width: 100%; /* Poți ajusta lățimea pentru a-l face mai compact */
+        border-radius: 30px; /* Colțuri rotunjite pentru un aspect mai elegant */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Umbră subtilă pentru a-l face mai elegant */
+    }
+    
+    #newsletter input {
+        padding: 12px;
+        font-size: 1rem;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc; /* Border subtil */
+        width: 70%; /* Mărirea lățimii pentru input */
+        margin-bottom: 10px; /* Spațiu sub input */
+    }
+    
+    #newsletter button {
+        padding: 12px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #333; /* Culoare de fundal pentru buton */
+        color: #fff; /* Text alb pentru contrast */
+        border: none;
+        border-radius: 5px; /* Colțuri rotunjite */
+        transition: background-color 0.3s; /* Efect de tranziție la hover */
+    }
+    
+    #newsletter button:hover {
+        background-color: #555; /* Culoare mai deschisă la hover */
+    }
+    
+
+/* Contact */
+#contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    margin-left: 0%; /* Muta secțiunea spre dreapta */
+    max-width: 80%; /* Limitează lățimea secțiunii pentru un aspect mai compact */
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Umbră subtilă pentru un efect elegant */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column; /* Alinierea câmpurilor pe verticală */
+    align-items: center; /* Aliniere centrală */
+    gap: 20px; /* Spațiu între câmpuri */
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px; /* Reducerea padding-ului pentru câmpuri mai compacte */
+    font-size: 1rem;
+    border-radius: 25px; /* Colțuri rotunjite */
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    width: 70%; /* Lățime ajustată pentru câmpuri */
+    margin-bottom: 10px; /* Spațiu sub câmpurile de input */
+    transition: border-color 0.3s ease;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1); /* Umbră doar pe partea dreaptă a casetelor */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #333; /* Culoare border la focus */
+}
+
+#contact button {
+    padding: 12px 24px; /* Reducerea padding-ului butonului pentru a fi mai mic */
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    width: 70%; /* Lățime ajustată pentru buton */
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1); /* Umbră doar pe partea dreaptă a butonului */
+}
+#contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    margin-left: 0%;
+    max-width: 80%;
+    border-radius: 30px;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Spațiu între contact și call to action */
+}
+
+#contact button:hover {
+    background-color: #c53918;
+}
+
+/* REZERVARE */
+
+
+#reservation {
+    background-color: #f9f9f9; /* Culoare de fundal */
+    padding: 60px 20px; /* Spațiu în jurul secțiunii */
+    text-align: center; /* Centrează textul pe orizontală */
+}
+
+.reservation-content {
+    display: flex; /* Folosește flexbox pentru a alinia elementele */
+    flex-direction: row; /* Aranjează elementele pe orizontală */
+    justify-content: space-between; /* Spațiu între text și buton */
+    align-items: center; /* Aliniază elementele pe verticală */
+    max-width: 1200px; /* Lățimea maximă a secțiunii */
+    margin: 0 auto; /* Centrează secțiunea pe pagină */
+}
+
+.reservation-text {
+    max-width: 60%; /* Lățimea textului */
+}
+
+.reservation-text h2 {
+    font-size: 2rem; /* Dimensiune mai mare pentru titlu */
+    font-weight: bold;
+    margin-bottom: 20px; /* Spațiu sub titlu */
+    text-align: left; /* Aliniere la stânga pentru titlu */
+}
+
+.reservation-text p {
+    font-size: 1.2rem; /* Dimensiune medie pentru descriere */
+    line-height: 1.6; /* Distanța între rânduri */
+    margin-top: 0;
+    text-align: center; /* Textul descrierii va fi centrat */
+}
+
+.reservation-button a {
+    display: inline-block; /* Permite butonului să fie pe linia sa */
+    background-color: #333; /* Culoare de fundal buton */
+    color: #fff; /* Culoare text albă */
+    padding: 15px 30px; /* Dimensiuni pentru buton */
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Colțuri rotunjite */
+    transition: background-color 0.3s ease;
+}
+
+.reservation-button a:hover {
+    background-color: #c53918; /* Culoare mai deschisă la hover */
+}
+
+/* Stilizarea footer-ului */
+#footer {
+    background-color: #333; /* Culoare de fundal */
+    color: white; /* Culoare text */
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Asigură că footer-ul se află la baza paginii */
+    flex-shrink: 0; /* Evită micșorarea footer-ului */
+}
+
+/* Containerul din footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Secțiuni footer (stânga, centru, dreapta) */
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+/* Stilizare text footer stânga */
+.footer-left p {
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Stilizare linkuri footer */
+.footer-center ul, .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo-uri ANPC și dispute */
+.footer-logos img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Stiluri pentru imagini în footer */
+.footer-right img {
+    width: 150px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}

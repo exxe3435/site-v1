@@ -1,0 +1,24 @@
+#cta {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: 700%; /* Centrează textul pe orizontală */
+    display: flex;
+    justify-content: center; /* Centrează pe orizontală în cadrul secțiunii */
+    align-items: center; /* Centrează pe verticală în cadrul secțiunii */
+    flex-direction: column; /* Aranjează textul într-o coloană */
+    height: 20vh; /* Dacă vrei să ocupe întreaga înălțime a ferestrei */
+}
+
+.cta-text {
+    font-size: 1.2rem; /* Poți ajusta dimensiunea textului */
+    max-width: 80%; /* Limitează lățimea textului pentru a nu ieși din container */
+    margin: 1 auto; /* Asigură-te că este centrat pe orizontală */
+    line-height: 1.5; /* Ajustează distanța între rânduri */
+    margin-left: 30%
+}
+
+
+.cta-button {
+    margin-left: 30%; /* Asigură-te că butonul se aliniază la dreapta */
+}

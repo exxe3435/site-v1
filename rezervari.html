@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervă Online</title>
+    <link rel="stylesheet" href="style rezervari.css">
+</head>
+<body>
+
+    <!-- Header Transparent -->
+<header id="header">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- Inlocuieste textul cu o imagine -->
+            <a href="#">
+                <img src="logo.png" alt="Aroma Fericirii Logo" class="logo-img">
+            </a>
+        </div>
+
+     <!-- Meniu de Navigare -->
+<nav>
+    <ul>
+        <li><a href="file:///C:/Users/crzyd/OneDrive/Desktop/site/site%20de%20baza.html#home" target="_blank">Acasă</a></li>
+        <li><a href="file:///C:/Users/crzyd/OneDrive/Desktop/site/site%20de%20baza.html#menu" target="_blank">Meniu</a></li>
+        <li><a href="file:///C:/Users/crzyd/OneDrive/Desktop/site/site%20de%20baza.html#about" target="_blank">Despre noi</a></li>
+        <li><a href="file:///C:/Users/crzyd/OneDrive/Desktop/site/site%20de%20baza.html#contact" target="_blank">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+
+
+    <!-- Videoclip de fundal -->
+    <section id="hero">
+        <video autoplay loop muted id="video-background">
+            <source src="cafea-premium.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    <!-- Formularul de Rezervare -->
+    <section id="reservation">
+        <div class="reservation-content">
+            <div class="reservation-text">
+                <h2>Vino să ne vizitezi</h2>
+                <p>Te așteptăm la Cafeneaua noastră Premium pentru o experiență de neuitat. Savurează o cafea delicioasă într-un mediu relaxant!</p>
+            </div>
+            <div class="reservation-form">
+                <form id="reservation-form">
+                    <input type="text" placeholder="Nume" required>
+                    <input type="tel" placeholder="Număr de telefon" required>
+                    <input type="date" required>
+                    <input type="time" required>
+                    <input type="number" placeholder="Număr de persoane" required>
+                    <button type="submit" id="reserve-btn">Rezervă acum</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notificare toast -->
+    <div id="toast" class="toast">
+        Rezervarea a fost făcută cu succes!
+    </div>
+
+    <script>
+        // JavaScript pentru notificare la click pe buton
+        document.getElementById("reserve-btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Previne redirecționarea
+            var toast = document.getElementById("toast");
+            toast.classList.add("show");
+
+            // Îndepărtează notificarea după 3 secunde
+            setTimeout(function() {
+                toast.classList.remove("show");
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
+<!-- Footer -->
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>&copy; 2024 Aroma Fericirii. Toate drepturile rezervate.</p>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="#terms">Termeni și condiții</a></li>
+                <li><a href="#privacy">Politica de confidențialitate</a></li>
+                <li><a href="#faq">Întrebări frecvente</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="mailto:fearomafericiriibacau@yahoo.ro">fearomafericiriibacau@yahoo.ro</a></li>
+                <li><a href="tel:+40753881898">+40 753 881 898</a></li>
+            </ul>
+            <div class="footer-logos">
+                <img src="anpc-sal.jpg" alt="ANPC Logo">
+                <img src="pictogramaSOL.jpg" alt="Solutionarea disputelor online">
+            </div>
+        </div>
+    </div>
+</footer>
